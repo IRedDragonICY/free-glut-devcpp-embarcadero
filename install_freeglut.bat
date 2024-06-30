@@ -20,11 +20,11 @@ echo.
 echo  Make sure you have extracted the FreeGLUT archive before running this script.
 echo.
 :check_default_path
-echo  [1/4] Checking Default Installation Path...
+echo  [1/3] Checking Default Installation Path...
 echo.
 set "default_path=C:\Program Files (x86)\Embarcadero\Dev-Cpp"
 :copy_files
-echo  [2/4] Copying Files...
+echo  [2/3] Copying Files...
 echo.
 xcopy /E /Y "%cd%\include\GL" "%default_path%\TDM-GCC-64\x86_64-w64-mingw32\include\GL\"
 echo  Copied include files...
@@ -36,7 +36,7 @@ xcopy /Y "%cd%\bin\x64\freeglut.dll" "%systemroot%\System32\"
 echo  Copied x64 DLL file...
 echo.
 :success
-echo  [3/4] Installation Complete!
+echo  [3/3] Installation Complete!
 echo.
 echo  ===================================================================
 echo  ^| ^< FreeGLUT has been successfully installed. ^>               ^|
@@ -54,7 +54,7 @@ pause
 exit /b 0
 
 :error
-echo  [4/4] Installation Failed!
+echo  Installation Failed!
 echo.
 echo  An error occurred during the installation process. Please check the following:
 echo.
